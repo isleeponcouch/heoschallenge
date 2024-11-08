@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		D3F4D9962CDDFAEA00AF558F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F4D97D2CDDFAE900AF558F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3F4D9842CDDFAE900AF558F;
+			remoteInfo = "Heos Challenge";
+		};
+		D3F4D9A02CDDFAEA00AF558F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F4D97D2CDDFAE900AF558F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3F4D9842CDDFAE900AF558F;
+			remoteInfo = "Heos Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D3F4D9852CDDFAE900AF558F /* Heos Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heos Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F4D9952CDDFAEA00AF558F /* Heos ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heos ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F4D99F2CDDFAEA00AF558F /* Heos ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heos ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D3F4D9872CDDFAE900AF558F /* Heos Challenge */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Heos Challenge";
+			sourceTree = "<group>";
+		};
+		D3F4D9982CDDFAEA00AF558F /* Heos ChallengeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Heos ChallengeTests";
+			sourceTree = "<group>";
+		};
+		D3F4D9A22CDDFAEA00AF558F /* Heos ChallengeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Heos ChallengeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3F4D9822CDDFAE900AF558F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F4D9922CDDFAEA00AF558F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F4D99C2CDDFAEA00AF558F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3F4D97C2CDDFAE900AF558F = {
+			isa = PBXGroup;
+			children = (
+				D3F4D9872CDDFAE900AF558F /* Heos Challenge */,
+				D3F4D9982CDDFAEA00AF558F /* Heos ChallengeTests */,
+				D3F4D9A22CDDFAEA00AF558F /* Heos ChallengeUITests */,
+				D3F4D9862CDDFAE900AF558F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3F4D9862CDDFAE900AF558F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4D9852CDDFAE900AF558F /* Heos Challenge.app */,
+				D3F4D9952CDDFAEA00AF558F /* Heos ChallengeTests.xctest */,
+				D3F4D99F2CDDFAEA00AF558F /* Heos ChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3F4D9842CDDFAE900AF558F /* Heos Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3F4D9A92CDDFAEA00AF558F /* Build configuration list for PBXNativeTarget "Heos Challenge" */;
+			buildPhases = (
+				D3F4D9812CDDFAE900AF558F /* Sources */,
+				D3F4D9822CDDFAE900AF558F /* Frameworks */,
+				D3F4D9832CDDFAE900AF558F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D3F4D9872CDDFAE900AF558F /* Heos Challenge */,
+			);
+			name = "Heos Challenge";
+			packageProductDependencies = (
+			);
+			productName = "Heos Challenge";
+			productReference = D3F4D9852CDDFAE900AF558F /* Heos Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3F4D9942CDDFAEA00AF558F /* Heos ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3F4D9AC2CDDFAEA00AF558F /* Build configuration list for PBXNativeTarget "Heos ChallengeTests" */;
+			buildPhases = (
+				D3F4D9912CDDFAEA00AF558F /* Sources */,
+				D3F4D9922CDDFAEA00AF558F /* Frameworks */,
+				D3F4D9932CDDFAEA00AF558F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3F4D9972CDDFAEA00AF558F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D3F4D9982CDDFAEA00AF558F /* Heos ChallengeTests */,
+			);
+			name = "Heos ChallengeTests";
+			packageProductDependencies = (
+			);
+			productName = "Heos ChallengeTests";
+			productReference = D3F4D9952CDDFAEA00AF558F /* Heos ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3F4D99E2CDDFAEA00AF558F /* Heos ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3F4D9AF2CDDFAEA00AF558F /* Build configuration list for PBXNativeTarget "Heos ChallengeUITests" */;
+			buildPhases = (
+				D3F4D99B2CDDFAEA00AF558F /* Sources */,
+				D3F4D99C2CDDFAEA00AF558F /* Frameworks */,
+				D3F4D99D2CDDFAEA00AF558F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3F4D9A12CDDFAEA00AF558F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D3F4D9A22CDDFAEA00AF558F /* Heos ChallengeUITests */,
+			);
+			name = "Heos ChallengeUITests";
+			packageProductDependencies = (
+			);
+			productName = "Heos ChallengeUITests";
+			productReference = D3F4D99F2CDDFAEA00AF558F /* Heos ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3F4D97D2CDDFAE900AF558F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					D3F4D9842CDDFAE900AF558F = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					D3F4D9942CDDFAEA00AF558F = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = D3F4D9842CDDFAE900AF558F;
+					};
+					D3F4D99E2CDDFAEA00AF558F = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = D3F4D9842CDDFAE900AF558F;
+					};
+				};
+			};
+			buildConfigurationList = D3F4D9802CDDFAE900AF558F /* Build configuration list for PBXProject "Heos Challenge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3F4D97C2CDDFAE900AF558F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D3F4D9862CDDFAE900AF558F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3F4D9842CDDFAE900AF558F /* Heos Challenge */,
+				D3F4D9942CDDFAEA00AF558F /* Heos ChallengeTests */,
+				D3F4D99E2CDDFAEA00AF558F /* Heos ChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3F4D9832CDDFAE900AF558F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F4D9932CDDFAEA00AF558F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F4D99D2CDDFAEA00AF558F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3F4D9812CDDFAE900AF558F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F4D9912CDDFAEA00AF558F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F4D99B2CDDFAEA00AF558F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3F4D9972CDDFAEA00AF558F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3F4D9842CDDFAE900AF558F /* Heos Challenge */;
+			targetProxy = D3F4D9962CDDFAEA00AF558F /* PBXContainerItemProxy */;
+		};
+		D3F4D9A12CDDFAEA00AF558F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3F4D9842CDDFAE900AF558F /* Heos Challenge */;
+			targetProxy = D3F4D9A02CDDFAEA00AF558F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D3F4D9A72CDDFAEA00AF558F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3F4D9A82CDDFAEA00AF558F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3F4D9AA2CDDFAEA00AF558F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heos Challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = YG86643FTB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.masimo.heoschallenge.Heos-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3F4D9AB2CDDFAEA00AF558F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heos Challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = YG86643FTB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.masimo.heoschallenge.Heos-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3F4D9AD2CDDFAEA00AF558F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YG86643FTB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.masimo.heoschallenge.Heos-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heos Challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Heos Challenge";
+			};
+			name = Debug;
+		};
+		D3F4D9AE2CDDFAEA00AF558F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YG86643FTB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.masimo.heoschallenge.Heos-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heos Challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Heos Challenge";
+			};
+			name = Release;
+		};
+		D3F4D9B02CDDFAEA00AF558F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YG86643FTB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.masimo.heoschallenge.Heos-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Heos Challenge";
+			};
+			name = Debug;
+		};
+		D3F4D9B12CDDFAEA00AF558F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YG86643FTB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.masimo.heoschallenge.Heos-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Heos Challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3F4D9802CDDFAE900AF558F /* Build configuration list for PBXProject "Heos Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F4D9A72CDDFAEA00AF558F /* Debug */,
+				D3F4D9A82CDDFAEA00AF558F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3F4D9A92CDDFAEA00AF558F /* Build configuration list for PBXNativeTarget "Heos Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F4D9AA2CDDFAEA00AF558F /* Debug */,
+				D3F4D9AB2CDDFAEA00AF558F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3F4D9AC2CDDFAEA00AF558F /* Build configuration list for PBXNativeTarget "Heos ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F4D9AD2CDDFAEA00AF558F /* Debug */,
+				D3F4D9AE2CDDFAEA00AF558F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3F4D9AF2CDDFAEA00AF558F /* Build configuration list for PBXNativeTarget "Heos ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F4D9B02CDDFAEA00AF558F /* Debug */,
+				D3F4D9B12CDDFAEA00AF558F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3F4D97D2CDDFAE900AF558F /* Project object */;
+}
