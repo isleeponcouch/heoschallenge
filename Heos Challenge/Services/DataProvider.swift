@@ -7,30 +7,6 @@
 
 import Foundation
 
-enum DataEndpoint: String {
-    enum Location {
-        case cloud
-        case local
-    }
-    
-    case devices = "https://skyegloup-eula.s3.amazonaws.com/heos_app/code_test/devices.json"
-    case nowPlayings = "https://skyegloup-eula.s3.amazonaws.com/heos_app/code_test/nowplaying.json"
-    
-    func url(_ from: Location) -> URL {
-        switch self {
-            
-        case .devices:
-            return from == .cloud ? URL(string: self.rawValue)! : Self.localLocations[self.rawValue]!
-        case .nowPlayings:
-            return from == .cloud ? URL(string: self.rawValue)! : Self.localLocations[self.rawValue]!
-        }
-    }
-    
-    static var localLocations: [String: URL] {
-        [self.devices.rawValue: Bundle.main.url(forResource: "devices", withExtension: "json")!]
-    }
-}
-
 protocol DataProvider {
     func getDevices() async throws -> [Device]
     func getNowPlaying() async throws -> [NowPlaying]
@@ -44,26 +20,15 @@ class CloudDataProvider: DataProvider {
     }
     
     func getDevices() async throws -> [Device] {
-        try await apiClient.request(entity: DevicesResult.self, fromEndpoint: DataEndpoint.devices.url(.cloud)).devices
+        try await apiClient.request(entity: DevicesResult.self, fromEndpoint: DataEndpoint.devices.url).devices
     }
     
     func getNowPlaying() async throws -> [NowPlaying] {
-        try await apiClient.request(entity: NowPlayingResult.self, fromEndpoint: DataEndpoint.nowPlayings.url(.cloud)).nowPlaying
+        try await apiClient.request(entity: NowPlayingResult.self, fromEndpoint: DataEndpoint.nowPlayings.url).nowPlaying
     }
 }
 
 class LocalDataProvider: DataProvider {
-    enum LocalDataProviderError: Error {
-        case DataFileNotFound
-    }
-    
-    private var decoder: JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .iso8601
-        return decoder
-    }
-    
     func getDevices() async throws -> [Device] {
         try resultFromLocalJson(type: DevicesResult.self, file: "devices").devices
     }
@@ -72,6 +37,19 @@ class LocalDataProvider: DataProvider {
         let result = try resultFromLocalJson(type: NowPlayingResult.self, file: "nowplaying").nowPlaying
         
         return replaceCloudUrlsWithLocalUrls(result)
+    }
+}
+
+extension LocalDataProvider {
+    private enum LocalDataProviderError: Error {
+        case DataFileNotFound
+    }
+    
+    private var decoder: JSONDecoder {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .iso8601
+        return decoder
     }
     
     private func replaceCloudUrlsWithLocalUrls(_ data: [NowPlaying]) -> [NowPlaying] {

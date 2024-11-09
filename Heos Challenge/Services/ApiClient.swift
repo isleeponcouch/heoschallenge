@@ -31,16 +31,14 @@ class ApiClient {
     @discardableResult
     func request<T: Codable>(entity: T.Type, fromEndpoint endpoint: URL) async throws -> T {
         Logger().info("Performing request for type \(entity.self) from endpoint: \(endpoint)")
+        
         let url = endpoint
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
         let session = URLSession(configuration: config)
         
         let (data, response) = try await session.data(for: request)
         
-        guard let httpResponse = response as? HTTPURLResponse,
-              (200...299).contains(httpResponse.statusCode) else {
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
             throw ApiException.HTTPResponseError
         }
         
