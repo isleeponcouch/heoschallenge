@@ -29,9 +29,34 @@
 		D3F4D99F2CDDFAEA00AF558F /* Heos ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heos ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D3F4D9BD2CDE05EC00AF558F /* Exceptions for "Heos Challenge" folder in "Heos ChallengeTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppState.swift,
+				MockData/devices.json,
+				MockData/nowplaying.json,
+			);
+			target = D3F4D9942CDDFAEA00AF558F /* Heos ChallengeTests */;
+		};
+		D3F4D9BE2CDE05EC00AF558F /* Exceptions for "Heos Challenge" folder in "Heos ChallengeUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppState.swift,
+				MockData/devices.json,
+				MockData/nowplaying.json,
+			);
+			target = D3F4D99E2CDDFAEA00AF558F /* Heos ChallengeUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D3F4D9872CDDFAE900AF558F /* Heos Challenge */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D3F4D9BD2CDE05EC00AF558F /* Exceptions for "Heos Challenge" folder in "Heos ChallengeTests" target */,
+				D3F4D9BE2CDE05EC00AF558F /* Exceptions for "Heos Challenge" folder in "Heos ChallengeUITests" target */,
+			);
 			path = "Heos Challenge";
 			sourceTree = "<group>";
 		};
@@ -404,7 +429,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +459,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
