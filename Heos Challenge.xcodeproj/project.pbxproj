@@ -65,11 +65,6 @@
 			path = "Heos ChallengeTests";
 			sourceTree = "<group>";
 		};
-		D3F4D9A22CDDFAEA00AF558F /* Heos ChallengeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Heos ChallengeUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +97,6 @@
 			children = (
 				D3F4D9872CDDFAE900AF558F /* Heos Challenge */,
 				D3F4D9982CDDFAEA00AF558F /* Heos ChallengeTests */,
-				D3F4D9A22CDDFAEA00AF558F /* Heos ChallengeUITests */,
 				D3F4D9862CDDFAE900AF558F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -177,9 +171,6 @@
 			);
 			dependencies = (
 				D3F4D9A12CDDFAEA00AF558F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D3F4D9A22CDDFAEA00AF558F /* Heos ChallengeUITests */,
 			);
 			name = "Heos ChallengeUITests";
 			packageProductDependencies = (
