@@ -21,6 +21,7 @@ struct NowPlayingView: View {
             } else {
                 VStack {
                     Text("Now Playing")
+                        .fontWeight(.semibold)
                     
                     if let errorMessage = viewModel.errorMessage {
                         Text(errorMessage)
@@ -35,8 +36,11 @@ struct NowPlayingView: View {
                             }
                             .frame(maxWidth: 300, maxHeight: 300)
                             .clipped()
-                            Text(selected.artistName)
+                            
                             Text(selected.trackName)
+                                .fontWeight(.semibold)
+                            Text(selected.artistName)
+                                .font(.caption)
                             
                             Button {
                                 
@@ -45,18 +49,31 @@ struct NowPlayingView: View {
                             }
                         }
                     }
+                    
+                    Spacer()
                 }
             }
         }
         .onAppear {
             Task {
-                try await viewModel.loadData()
+                await viewModel.loadData()
                 viewModel.setSelected()
             }
         }
     }
 }
 
-//#Preview {
-//    NowPlaying()
-//}
+#Preview {
+    let playing = NowPlaying(
+        deviceId: 1,
+        artworkSmallURL: URL(string: "https://skyegloup-eula.s3.amazonaws.com/heos_app/code_test/Appetite+For+Destruction+-+small.jpg")!,
+        artworkLargeURL: URL(string: "https://skyegloup-eula.s3.amazonaws.com/heos_app/code_test/Appetite+For+Destruction+-+large.jpg")!,
+        trackName: "Welcome To The Jungle",
+        artistName: "Guns N' Roses"
+    )
+    
+    let state = AppState()
+    state.selectedRoom = Device(id: 1, name: "Room", nowPlaying: playing)
+    
+    return NowPlayingView(appState: state)
+}
