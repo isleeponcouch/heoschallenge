@@ -18,8 +18,4 @@ enum DataEndpoint: String {
         
         return url
     }
-    
-    static var localLocations: [String: URL] {
-        [self.devices.rawValue: Bundle.main.url(forResource: "devices", withExtension: "json")!]
-    }
 }
