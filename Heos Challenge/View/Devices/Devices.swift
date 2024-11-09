@@ -49,13 +49,7 @@ struct Devices: View {
         } label: {
             HStack {
                 if let nowPlaying = device.nowPlaying {
-                    AsyncImage(url: nowPlaying.artworkSmallURL) { image in
-                        image.resizable().scaledToFill().clipShape(RoundedRectangle(cornerRadius: 8))
-                    } placeholder:  {
-                        RoundedRectangle(cornerRadius: 8).foregroundStyle(.gray)
-                    }
-                    .frame(maxWidth: 60, maxHeight: 60)
-                    .clipped()
+                    CoverArt(url: nowPlaying.artworkSmallURL, size: 60, cornerRadius: 8)
                     VStack(alignment: .leading) {
                         Text(device.name)
                             .fontWeight(.semibold)

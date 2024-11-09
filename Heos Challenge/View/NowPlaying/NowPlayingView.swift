@@ -29,24 +29,12 @@ struct NowPlayingView: View {
                     
                     if let selected = viewModel.selected {
                         VStack {
-                            AsyncImage(url: selected.artworkLargeURL) { image in
-                                image.resizable().scaledToFill().clipShape(RoundedRectangle(cornerRadius: 20))
-                            } placeholder:  {
-                                RoundedRectangle(cornerRadius: 20).foregroundStyle(.gray)
-                            }
-                            .frame(maxWidth: 300, maxHeight: 300)
-                            .clipped()
+                            CoverArt(url: selected.artworkLargeURL, size: 300, cornerRadius: 20)
                             
                             Text(selected.trackName)
                                 .fontWeight(.semibold)
                             Text(selected.artistName)
                                 .font(.caption)
-                            
-                            Button {
-                                
-                            } label: {
-                                
-                            }
                         }
                     }
                     
