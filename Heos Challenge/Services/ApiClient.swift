@@ -42,9 +42,9 @@ class ApiClient {
             throw ApiException.HTTPResponseError
         }
         
-#if DEBUG
-        try await Task.sleep(nanoseconds: 2_000_000_000) // for testing the loading screen
-#endif
+//#if DEBUG
+//        try await Task.sleep(nanoseconds: 2_000_000_000) // for testing the loading screen
+//#endif
         
         return try decoder.decode(T.self, from: data)
     }

@@ -19,9 +19,9 @@ struct Devices: View {
             if viewModel.isLoading {
                 LoadingView(sourceIsMockData: viewModel.appState.useMockData)
             } else {
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Rooms")
-                        .font(.title3)
+                        .font(.title)
                     if let errorMessage = viewModel.errorMessage {
                         Text(errorMessage)
                     }
@@ -32,6 +32,7 @@ struct Devices: View {
                     }
                     Spacer()
                 }
+                .padding(10)
             }
         }
         .onAppear {
@@ -46,34 +47,42 @@ struct Devices: View {
         Button {
             viewModel.selected = device
         } label: {
-            VStack {
-                Text(device.name)
+            HStack {
                 if let nowPlaying = device.nowPlaying {
-                    Text(nowPlaying.artistName)
-                    Text(nowPlaying.trackName)
+                    AsyncImage(url: nowPlaying.artworkSmallURL) { image in
+                        image.resizable().scaledToFill().clipShape(RoundedRectangle(cornerRadius: 8))
+                    } placeholder:  {
+                        RoundedRectangle(cornerRadius: 8).foregroundStyle(.gray)
+                    }
+                    .frame(maxWidth: 60, maxHeight: 60)
+                    .clipped()
+                    VStack(alignment: .leading) {
+                        Text(device.name)
+                            .fontWeight(.semibold)
+                        Text("\(nowPlaying.trackName), \(nowPlaying.artistName)")
+                            .font(.caption)
+                    }
+                    Spacer()
                 } else {
-                    Text("No playing")
+                    Text("Silence is golden.")
                 }
-                Spacer()
             }
-            .padding(20)
+            .padding(14)
+            .frame(maxWidth: .infinity)
+            .foregroundStyle(.black)
             .background(deviceCardBackground(device))
         }
     }
     
     @ViewBuilder func deviceCardBackground(_ device: Device) -> some View {
         if let selected = viewModel.selected, selected == device  {
-            RoundedRectangle(cornerRadius: 20).foregroundStyle(.blue)
+            RoundedRectangle(cornerRadius: 16).foregroundStyle(.secondary)
         } else {
-            RoundedRectangle(cornerRadius: 20).foregroundStyle(.green)
+            RoundedRectangle(cornerRadius: 16).foregroundStyle(.tertiary)
         }
     }
 }
 
-//extension Devices {
-//
-//}
-//
-//#Preview {
-//    Devices()
-//}
+#Preview {
+    Devices(appState: AppState())
+}
