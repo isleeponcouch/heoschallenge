@@ -33,7 +33,7 @@ class ApiClient {
         Logger().info("Performing request for type \(entity.self) from endpoint: \(endpoint)")
         
         let url = endpoint
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
         let session = URLSession(configuration: config)
         
         let (data, response) = try await session.data(for: request)

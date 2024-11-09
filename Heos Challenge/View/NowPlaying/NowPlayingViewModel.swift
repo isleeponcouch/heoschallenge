@@ -30,7 +30,7 @@ extension NowPlayingView {
         
         public func setSelected() {
             if let now = nowPlaying.first(where: { n in
-                n.deviceId == appState.selectedRoom
+                n.deviceId == appState.selectedRoom?.id
             }) {
                 selected = now
             }

@@ -11,6 +11,6 @@ import SwiftUI
 class AppState {
     var useMockData = false
     var isPaused = false
-    var selectedRoom = 1
+    var selectedRoom: Device?
     var selectedTrack: NowPlaying?
 }

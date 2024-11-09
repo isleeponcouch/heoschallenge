@@ -45,7 +45,6 @@ struct Devices: View {
     func deviceCard(_ device: Device) -> some View {
         Button {
             viewModel.selected = device
-            viewModel.appState.selectedRoom = device.id
         } label: {
             VStack {
                 Text(device.name)

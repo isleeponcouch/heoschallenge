@@ -12,7 +12,11 @@ extension Devices {
     @Observable
     class DevicesViewModel: BaseViewModel {
         var devices: [Device] = []
-        var selected: Device?
+        var selected: Device? {
+            didSet {
+                appState.selectedRoom = selected
+            }
+        }
         var nowPlaying: [NowPlaying] = []
         
         public func loadData() async {
