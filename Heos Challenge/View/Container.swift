@@ -23,6 +23,17 @@ struct Container: View {
                 "Settings"
             }
         }
+        
+        var systemImage: String {
+            switch self {
+            case .Rooms:
+                return "square.split.bottomrightquarter.fill"
+            case .NowPlaying:
+                return "play.square"
+            case .Settings:
+                return "gear"
+            }
+        }
     }
     
     @Environment(AppState.self) private var appState
@@ -33,19 +44,19 @@ struct Container: View {
             Devices(appState: appState)
                 .tag(HeosTab.Rooms)
                 .tabItem {
-                    Label(HeosTab.Rooms.label, systemImage: "square.split.bottomrightquarter.fill")
+                    Label(HeosTab.Rooms.label, systemImage: HeosTab.Rooms.systemImage)
                 }
             
             NowPlayingView(appState: appState)
                 .tag(HeosTab.NowPlaying)
                 .tabItem {
-                    Label(HeosTab.NowPlaying.label, systemImage: "square.split.bottomrightquarter.fill")
+                    Label(HeosTab.NowPlaying.label, systemImage: HeosTab.NowPlaying.systemImage)
                 }
             
             Settings(appState: appState)
                 .tag(HeosTab.Settings)
                 .tabItem {
-                    Label(HeosTab.Settings.label, systemImage: "square.split.bottomrightquarter.fill")
+                    Label(HeosTab.Settings.label, systemImage: HeosTab.Settings.systemImage)
                 }
         }
     }
