@@ -16,7 +16,7 @@ struct NowPlayingResult: Codable {
 }
 
 struct NowPlaying: Codable, Hashable {
-    var deviceId: Int
+    var deviceId: DeviceId
     var artworkSmallURL: URL
     var artworkLargeURL: URL
     var trackName: String

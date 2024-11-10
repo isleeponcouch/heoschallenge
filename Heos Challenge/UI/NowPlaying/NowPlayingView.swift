@@ -19,38 +19,48 @@ struct NowPlayingView: View {
             if viewModel.isLoading {
                 LoadingView(sourceIsMockData: viewModel.appState.useMockData)
             } else {
-                VStack {
-                    Text("Now Playing")
-                        .fontWeight(.semibold)
-                    
-                    if let errorMessage = viewModel.errorMessage {
-                        Text(errorMessage)
-                    }
-                    
-                    if let selected = viewModel.showing {
-                        VStack {
-                            CoverArt(url: selected.artworkLargeURL, size: 300, cornerRadius: 20)
-                            
-                            Text(selected.trackName)
-                                .fontWeight(.semibold)
-                            Text(selected.artistName)
-                                .font(.caption)
-                            
-                            Button {
-                                viewModel.appState.playingState.setPlayingState(for: selected.deviceId, toPlaying: !viewModel.showingIsPlaying)
-                            } label: {
-                                Image(systemName: viewModel.showingIsPlaying ? "pause.fill" : "play.fill")
-                            }
-                        }
-                    }
-                    
-                    Spacer()
-                }
+                nowPlaying
             }
         }
         .onAppear {
             Task {
                 await viewModel.loadData()
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var nowPlaying: some View {
+        VStack {
+            Text("Now Playing")
+                .fontWeight(.semibold)
+            
+            if let errorMessage = viewModel.errorMessage {
+                Text(errorMessage)
+            }
+            
+            player
+            
+            Spacer()
+        }
+    }
+    
+    @ViewBuilder
+    private var player: some View {
+        if let selected = viewModel.showing {
+            VStack {
+                CoverArt(url: selected.artworkLargeURL, size: 300, cornerRadius: 20)
+                
+                Text(selected.trackName)
+                    .fontWeight(.semibold)
+                Text(selected.artistName)
+                    .font(.caption)
+                
+                Button {
+                    viewModel.appState.playingState.setPlayingState(for: selected.deviceId, toPlaying: !viewModel.showingIsPlaying)
+                } label: {
+                    Image(systemName: viewModel.showingIsPlaying ? "pause.fill" : "play.fill")
+                }
             }
         }
     }

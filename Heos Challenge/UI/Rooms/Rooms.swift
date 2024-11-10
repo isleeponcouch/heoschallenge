@@ -19,20 +19,7 @@ struct Rooms: View {
             if viewModel.isLoading {
                 LoadingView(sourceIsMockData: viewModel.appState.useMockData)
             } else {
-                VStack(alignment: .leading) {
-                    Text("Rooms")
-                        .font(.title)
-                    if let errorMessage = viewModel.errorMessage {
-                        Text(errorMessage)
-                    }
-                    ScrollView(.vertical) {
-                        ForEach(viewModel.allDevices, id: \.self) { device in
-                            roomCard(device)
-                        }
-                    }
-                    Spacer()
-                }
-                .padding(10)
+                rooms
             }
         }
         .onAppear {
@@ -43,7 +30,25 @@ struct Rooms: View {
     }
     
     @ViewBuilder
-    func roomCard(_ device: Device) -> some View {
+    private var rooms: some View {
+        VStack(alignment: .leading) {
+            Text("Rooms")
+                .font(.title)
+            if let errorMessage = viewModel.errorMessage {
+                Text(errorMessage)
+            }
+            ScrollView(.vertical) {
+                ForEach(viewModel.allDevices, id: \.self) { device in
+                    roomCard(device)
+                }
+            }
+            Spacer()
+        }
+        .padding(10)
+    }
+    
+    @ViewBuilder
+    private func roomCard(_ device: Device) -> some View {
         Button {
             viewModel.selected = device
         } label: {
@@ -65,11 +70,12 @@ struct Rooms: View {
             .padding(14)
             .frame(maxWidth: .infinity)
             .foregroundStyle(.black)
-            .background(deviceCardBackground(device))
+            .background(roomCardBackground(device))
         }
     }
     
-    @ViewBuilder func deviceCardBackground(_ device: Device) -> some View {
+    @ViewBuilder
+    private func roomCardBackground(_ device: Device) -> some View {
         if let selected = viewModel.selected, selected == device  {
             RoundedRectangle(cornerRadius: 16).foregroundStyle(.secondary)
         } else {

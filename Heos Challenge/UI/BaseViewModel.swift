@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-@Observable class BaseViewModel {
+@Observable
+class BaseViewModel {
     var appState: AppState
     var isLoading = true
     var errorMessage: String?

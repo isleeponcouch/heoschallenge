@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabbedBrowser: View {
-    private enum HeosTab: Int {
+    private enum Tab: Int {
         case Rooms
         case NowPlaying
         case Settings
@@ -37,26 +37,26 @@ struct TabbedBrowser: View {
     }
     
     @Environment(AppState.self) private var appState
-    @State private var selectedTab = HeosTab.NowPlaying
+    @State private var selectedTab = Tab.NowPlaying
     
     var body: some View {
         TabView(selection: $selectedTab) {
             Rooms(appState: appState)
-                .tag(HeosTab.Rooms)
+                .tag(Tab.Rooms)
                 .tabItem {
-                    Label(HeosTab.Rooms.label, systemImage: HeosTab.Rooms.systemImage)
+                    Label(Tab.Rooms.label, systemImage: Tab.Rooms.systemImage)
                 }
             
             NowPlayingView(appState: appState)
-                .tag(HeosTab.NowPlaying)
+                .tag(Tab.NowPlaying)
                 .tabItem {
-                    Label(HeosTab.NowPlaying.label, systemImage: HeosTab.NowPlaying.systemImage)
+                    Label(Tab.NowPlaying.label, systemImage: Tab.NowPlaying.systemImage)
                 }
             
             Settings(appState: appState)
-                .tag(HeosTab.Settings)
+                .tag(Tab.Settings)
                 .tabItem {
-                    Label(HeosTab.Settings.label, systemImage: HeosTab.Settings.systemImage)
+                    Label(Tab.Settings.label, systemImage: Tab.Settings.systemImage)
                 }
         }
     }
