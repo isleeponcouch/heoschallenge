@@ -28,7 +28,6 @@ class ApiClient {
         return config
     }
     
-    @discardableResult
     func request<T: Codable>(entity: T.Type, fromEndpoint endpoint: URL) async throws -> T {
         Logger().info("Performing request for type \(entity.self) from endpoint: \(endpoint)")
         
