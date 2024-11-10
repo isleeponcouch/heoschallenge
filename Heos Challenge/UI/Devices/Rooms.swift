@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct Devices: View {
-    @State private var viewModel: DevicesViewModel
+struct Rooms: View {
+    @State private var viewModel: ViewModel
     
     init(appState: AppState) {
-        self.viewModel = DevicesViewModel(appState: appState)
+        self.viewModel = ViewModel(appState: appState)
     }
     
     var body: some View {
@@ -27,7 +27,7 @@ struct Devices: View {
                     }
                     ScrollView(.vertical) {
                         ForEach(viewModel.allDevices, id: \.self) { device in
-                            deviceCard(device)
+                            roomCard(device)
                         }
                     }
                     Spacer()
@@ -43,7 +43,7 @@ struct Devices: View {
     }
     
     @ViewBuilder
-    func deviceCard(_ device: Device) -> some View {
+    func roomCard(_ device: Device) -> some View {
         Button {
             viewModel.selected = device
         } label: {
@@ -55,6 +55,7 @@ struct Devices: View {
                             .fontWeight(.semibold)
                         Text("\(nowPlaying.trackName), \(nowPlaying.artistName)")
                             .font(.caption)
+                        Image(systemName: viewModel.isPlaying(device: device.id) ? "play.fill" : "stop.fill")
                     }
                     Spacer()
                 } else {
@@ -78,5 +79,5 @@ struct Devices: View {
 }
 
 #Preview {
-    Devices(appState: AppState())
+    Rooms(appState: AppState())
 }

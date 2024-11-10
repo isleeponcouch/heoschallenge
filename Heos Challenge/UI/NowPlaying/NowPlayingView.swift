@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct NowPlayingView: View {
-    @State private var viewModel: NowPlayingViewModel
+    @State private var viewModel: ViewModel
     
     init(appState: AppState) {
-        self.viewModel = NowPlayingViewModel(appState: appState)
+        self.viewModel = ViewModel(appState: appState)
     }
     
     var body: some View {
@@ -35,6 +35,12 @@ struct NowPlayingView: View {
                                 .fontWeight(.semibold)
                             Text(selected.artistName)
                                 .font(.caption)
+                            
+                            Button {
+                                viewModel.appState.playingState.setPlayingState(for: selected.deviceId, toPlaying: !viewModel.showingIsPlaying)
+                            } label: {
+                                Image(systemName: viewModel.showingIsPlaying ? "pause.fill" : "play.fill")
+                            }
                         }
                     }
                     

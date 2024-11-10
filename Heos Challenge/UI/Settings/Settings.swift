@@ -24,7 +24,7 @@ struct Settings: View {
         }
     }
 }
-//
-//#Preview {
-//    Settings()
-//}
+
+#Preview {
+    Settings(appState: AppState())
+}

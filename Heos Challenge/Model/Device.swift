@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias DeviceId = Int
+
 struct DevicesResult: Codable {
     var devices: [Device]
     
@@ -16,7 +18,7 @@ struct DevicesResult: Codable {
 }
 
 struct Device: Codable, Hashable {
-    var id: Int
+    var id: DeviceId
     var name: String
     var nowPlaying: NowPlaying?
     

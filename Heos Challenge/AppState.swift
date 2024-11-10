@@ -10,7 +10,20 @@ import SwiftUI
 @Observable
 class AppState {
     var useMockData = false
-    var isPaused = false
     var selectedRoom: Device?
     var selectedTrack: NowPlaying?
+    var playingState = PlayingState()
+}
+
+@Observable
+class PlayingState {
+    var playingStates: [DeviceId: Bool] = [:]
+    
+    public func setPlayingState(for device: DeviceId, toPlaying: Bool) {
+        playingStates[device] = toPlaying
+    }
+    
+    public func isPlaying(device: DeviceId) -> Bool {
+        return playingStates[device] ?? false
+    }
 }

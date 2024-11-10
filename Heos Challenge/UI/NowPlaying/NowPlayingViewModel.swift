@@ -10,11 +10,23 @@ import Foundation
 extension NowPlayingView {
     
     @Observable
-    class NowPlayingViewModel: BaseViewModel {
+    class ViewModel: BaseViewModel {
         var allNowPlaying: [NowPlaying] = []
         var showing: NowPlaying?
         
-        public func loadData() async {
+        var showingIsPlaying: Bool {
+            if let showing = showing {
+                return appState.playingState.isPlaying(device: showing.deviceId)
+            }
+            
+            return false
+        }
+        
+        func setPlaying(_ playing: Bool, deviceId: DeviceId) {
+            appState.playingState.setPlayingState(for: deviceId, toPlaying: playing)
+        }
+        
+        func loadData() async {
             isLoading = true; defer { isLoading = false }
             
             do {

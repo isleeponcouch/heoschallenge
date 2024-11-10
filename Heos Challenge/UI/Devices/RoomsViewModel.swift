@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-extension Devices {
+extension Rooms {
     
     @Observable
-    class DevicesViewModel: BaseViewModel {
+    class ViewModel: BaseViewModel {
         var allDevices: [Device] = []
         var allNowPlaying: [NowPlaying] = []
         
@@ -20,7 +20,11 @@ extension Devices {
             }
         }
         
-        public func loadData() async {
+        func isPlaying(device: DeviceId) -> Bool {
+            return appState.playingState.isPlaying(device: device)
+        }
+        
+        func loadData() async {
             isLoading = true; defer { isLoading = false }
             
             do {

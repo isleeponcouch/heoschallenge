@@ -1,5 +1,5 @@
 //
-//  Container.swift
+//  TabbedBrowser.swift
 //  Heos Challenge
 //
 //  Created by Tobi Gundry on 8/11/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Container: View {
+struct TabbedBrowser: View {
     private enum HeosTab: Int {
         case Rooms
         case NowPlaying
@@ -41,7 +41,7 @@ struct Container: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Devices(appState: appState)
+            Rooms(appState: appState)
                 .tag(HeosTab.Rooms)
                 .tabItem {
                     Label(HeosTab.Rooms.label, systemImage: HeosTab.Rooms.systemImage)
@@ -63,5 +63,5 @@ struct Container: View {
 }
 
 #Preview {
-    Container()
+    TabbedBrowser()
 }
