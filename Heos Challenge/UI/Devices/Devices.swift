@@ -26,7 +26,7 @@ struct Devices: View {
                         Text(errorMessage)
                     }
                     ScrollView(.vertical) {
-                        ForEach(viewModel.devices, id: \.self) { device in
+                        ForEach(viewModel.allDevices, id: \.self) { device in
                             deviceCard(device)
                         }
                     }

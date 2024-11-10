@@ -11,30 +11,28 @@ extension Devices {
     
     @Observable
     class DevicesViewModel: BaseViewModel {
-        var devices: [Device] = []
+        var allDevices: [Device] = []
+        var allNowPlaying: [NowPlaying] = []
+        
         var selected: Device? {
             didSet {
                 appState.selectedRoom = selected
             }
         }
-        var nowPlaying: [NowPlaying] = []
         
         public func loadData() async {
-            isLoading = true
-            
-            defer { isLoading = false }
+            isLoading = true; defer { isLoading = false }
             
             do {
-                devices = try await dataProvider.getDevices()
-                nowPlaying = try await dataProvider.getNowPlaying()
+                let allDevicesResponse = try await dataProvider.getDevices()
                 
-                devices = devices.map { device in
-                    if let playingForDevice = nowPlaying.first(where: { nowPlaying in
+                allNowPlaying = try await dataProvider.getNowPlaying()
+                
+                allDevices = allDevicesResponse.map { device in
+                    if let playingForDevice = allNowPlaying.first(where: { nowPlaying in
                         nowPlaying.deviceId == device.id
                     }) {
-                        var dev = device
-                        dev.nowPlaying = playingForDevice
-                        return dev
+                        return Device(id: device.id, name: device.name, nowPlaying: playingForDevice)
                     } else {
                         return device
                     }

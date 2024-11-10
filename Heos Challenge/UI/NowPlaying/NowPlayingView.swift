@@ -27,7 +27,7 @@ struct NowPlayingView: View {
                         Text(errorMessage)
                     }
                     
-                    if let selected = viewModel.selected {
+                    if let selected = viewModel.showing {
                         VStack {
                             CoverArt(url: selected.artworkLargeURL, size: 300, cornerRadius: 20)
                             
@@ -45,7 +45,6 @@ struct NowPlayingView: View {
         .onAppear {
             Task {
                 await viewModel.loadData()
-                viewModel.setSelected()
             }
         }
     }

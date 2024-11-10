@@ -34,8 +34,8 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AppState.swift,
-				MockData/devices.json,
-				MockData/nowplaying.json,
+				Resources/MockData/devices.json,
+				Resources/MockData/nowplaying.json,
 			);
 			target = D3F4D9942CDDFAEA00AF558F /* Heos ChallengeTests */;
 		};
@@ -43,8 +43,8 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AppState.swift,
-				MockData/devices.json,
-				MockData/nowplaying.json,
+				Resources/MockData/devices.json,
+				Resources/MockData/nowplaying.json,
 			);
 			target = D3F4D99E2CDDFAEA00AF558F /* Heos ChallengeUITests */;
 		};

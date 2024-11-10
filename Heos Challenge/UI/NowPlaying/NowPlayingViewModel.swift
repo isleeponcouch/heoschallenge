@@ -11,28 +11,27 @@ extension NowPlayingView {
     
     @Observable
     class NowPlayingViewModel: BaseViewModel {
-        var nowPlaying: [NowPlaying] = []
-        var selected: NowPlaying?
+        var allNowPlaying: [NowPlaying] = []
+        var showing: NowPlaying?
         
         public func loadData() async {
-            isLoading = true
-            
-            defer {
-                isLoading = false
-            }
+            isLoading = true; defer { isLoading = false }
             
             do {
-                nowPlaying = try await dataProvider.getNowPlaying()
+                allNowPlaying = try await dataProvider.getNowPlaying()
+                showPlayingFromSelectedRoomOrDefault()
             } catch {
                 errorMessage = "Problem loading now playing data \(error.localizedDescription)"
             }
         }
         
-        public func setSelected() {
-            if let now = nowPlaying.first(where: { n in
+        private func showPlayingFromSelectedRoomOrDefault() {
+            if let now = allNowPlaying.first(where: { n in
                 n.deviceId == appState.selectedRoom?.id
             }) {
-                selected = now
+                showing = now
+            } else {
+                showing = allNowPlaying.first
             }
         }
     }

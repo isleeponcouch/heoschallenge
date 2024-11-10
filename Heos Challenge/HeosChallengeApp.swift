@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Heos_ChallengeApp: App {
+struct HeosChallengeApp: App {
     @State private var appState = AppState()
     
     var body: some Scene {
